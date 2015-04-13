@@ -1,0 +1,39 @@
+{
+  "name": "gitignore-globs",
+  "version": "0.1.0",
+  "description": "Parse a .gitignore file into an array of glob patterns.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha",
+    "watch-test": "node_modules/.bin/mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sevenweb/gitignore-globs"
+  },
+  "keywords": [
+    "gitignore",
+    "glob",
+    "globs",
+    "parse",
+    "patterns"
+  ],
+  "author": "Bernhard Wanger <bernhard@sevenweb.com> (https://sevenweb.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sevenweb/gitignore-globs/issues"
+  },
+  "homepage": "https://github.com/sevenweb/gitignore-globs",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "glob": "^5.0.5",
+    "glob-all": "^3.0.1",
+    "minimatch": "^2.0.4",
+    "mocha": "^2.2.4",
+    "multimatch": "^2.0.0"
+  }
+}
