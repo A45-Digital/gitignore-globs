@@ -21,9 +21,11 @@ function map(patterns) {
     // Account for files and directories.
     patterns = patterns.map(function(pattern) {
         if (!isFile(pattern)) {
-            // Create pair of globs.
-            if (pattern.slice(-1) !== '/') {
-                var suffix = (pattern.slice(-1) == '*') ? '*' : '/**'
+            var suffix = (pattern.slice(-1) == '*') ? '*' : '/**';
+            if (pattern.slice(-1) === '/') {
+              pattern = [pattern + suffix];
+            } else {
+              // Create pair of globs.
                 pattern = [pattern, pattern + suffix];
             }
         }
