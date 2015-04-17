@@ -52,6 +52,16 @@ describe('Globs', function() {
         expect(result).to.eql(['/foo', '/foo/', 'bar/foo', 'bar/foo/baz']);
     });
 
+    it('should match dir', function() {
+        var files = ['/foo', '/foo/', 'bar', 'bar/foo', 'bar/foo/baz'];
+        var patterns = ['foo/'];
+
+        var globs = parse._map(patterns);
+        var result = multimatch(files, globs);
+
+        expect(result).to.eql(['/foo/', 'bar/foo/baz']);
+    });
+
     it('should match glob pattern', function() {
         var files = ['bar', 'foo/', 'foo/bar', 'foo/bar/baz'];
         var patterns = ['foo/*'];
